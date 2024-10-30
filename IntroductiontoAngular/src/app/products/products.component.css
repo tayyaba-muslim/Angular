@@ -1,0 +1,24 @@
+.product-card {
+    border: 1px solid #ccc; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    transition: box-shadow 0.3s ease; 
+}
+
+.product-card:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+.card-body {
+    transition: background-color 0.3s ease;
+}
+
+.card-body:hover {
+    background-color: rgba(3, 66, 82, 0.8); 
+    box-shadow: 0 4px 8px rgba(73, 187, 196, 0.2); 
+}
+
+
+
+

@@ -4,7 +4,7 @@
         <!-- ngFor -->
         <div class="col-lg-4" *ngFor="let item of products">
             <!-- Cards -->
-            <div class="card mt-3" style="width: 18rem;">
+            <div class="card mt-3 product-card" style="width: 18rem;">
                 <img src="{{item.image}}" class="card-img-top" alt="{{item.Name}}">
                 <div class="card-body">
                     <h5 class="card-title">{{item.Name}}
@@ -16,15 +16,14 @@
                     
                     <!-- Original Price with Strikethrough -->
                     <p>
-                        <span class="text-muted" style="text-decoration: line-through;">PKR: {{item.Price}}</span>
+                        <span class="text-muted btn btn-dark" style="text-decoration: line-through; color:white !important">PKR: {{item.Price}}</span>
                     </p>
 
                     <!-- Discounted Price -->
                     <p>
-                        <strong>Discounted Price: PKR {{ getDiscountedPrice(item.Price) }}</strong>
+                        <strong  class="btn btn-info">Discounted Price: PKR {{ getDiscountedPrice(item.Price) }}</strong>
                     </p>
 
-                    <a href="#" class="btn btn-primary">Buy Now</a>
                 </div>
             </div>
         </div>
