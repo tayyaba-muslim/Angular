@@ -1,0 +1,32 @@
+<div class="container">
+    <h1 class="text-center">Our Products</h1>
+    <div class="row">
+        <!-- ngFor -->
+        <div class="col-lg-4" *ngFor="let item of products">
+            <!-- Cards -->
+            <div class="card mt-3" style="width: 18rem;">
+                <img src="{{item.image}}" class="card-img-top" alt="{{item.Name}}">
+                <div class="card-body">
+                    <h5 class="card-title">{{item.Name}}
+                        <span class="badge bg-danger" *ngIf="item.Price <= 1000">SALE 20% OFF</span>
+                        <span class="badge bg-secondary" *ngIf="item.Price > 1000 && item.Price < 2000">SALE 10% OFF</span>
+                        <span class="badge bg-success" *ngIf="item.Price >= 2000">SALE ENDED</span>
+                    </h5>
+                    <p class="card-text">{{item.Description}}</p>
+                    
+                    <!-- Original Price with Strikethrough -->
+                    <p>
+                        <span class="text-muted" style="text-decoration: line-through;">PKR: {{item.Price}}</span>
+                    </p>
+
+                    <!-- Discounted Price -->
+                    <p>
+                        <strong>Discounted Price: PKR {{ getDiscountedPrice(item.Price) }}</strong>
+                    </p>
+
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
