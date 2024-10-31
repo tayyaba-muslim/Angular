@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './contact.component.css'
 })
 export class ContactComponent {
+
 name:string=""
 email:string=""
 address:string=""

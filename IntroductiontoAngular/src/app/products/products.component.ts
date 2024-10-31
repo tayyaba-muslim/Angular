@@ -12,58 +12,58 @@ export class ProductsComponent {
   products: any[] = [
     {
       ID: 1,
-      image: "./asset/images/pro1.jpg",
-      Name: "Wireless Bluetooth Headphones",
-      Description: "Over-ear wireless headphones with noise-canceling technology and 20-hour battery life.",
+      image: "./asset/images/pro1.webp",
+      Name: "Bouquet of Roses",
+      Description: "A stunning bouquet of fresh roses, perfect for any occasion.",
       Price: 800 
     },
     {
       ID: 2,
       image: "./asset/images/pro2.jpg",
-      Name: "Portable Power Bank",
-      Description: "20,000mAh power bank with fast charging capability and multiple USB ports.",
+      Name: "Bloomerangs Flowers",
+      Description: "A vibrant mix of colorful blooms that bring joy and cheer.",
       Price: 900 
     },
     {
       ID: 3,
-      image: "./asset/images/pro3.webp",
-      Name: "Smart Home Security Camera",
-      Description: "1080p HD indoor security camera with night vision and motion detection alerts.",
+      image: "./asset/images/pro3.jpeg",
+      Name: "Time To Celebrate Black Rose",
+      Description: "Elegant black roses that add a unique touch to celebrations.",
       Price: 5000 
     },
     {
       ID: 4,
-      image: "./asset/images/pro4.webp",
-      Name: "Fitness Tracker Watch",
-      Description: "Waterproof fitness tracker with heart rate monitoring, step tracking, and sleep analysis.",
+      image: "./asset/images/pro4.jpg",
+      Name: "Red Roses Cheer Up Bunch",
+      Description: "A cheerful bunch of red roses to brighten anyone's day.",
       Price: 1200 
     },
     {
       ID: 5,
-      image: "./asset/images/pro5.webp",
-      Name: "Electric Kettle",
-      Description: "1.7-liter stainless steel electric kettle with temperature control and auto shut-off feature.",
+      image: "./asset/images/pro5.jpeg",
+      Name: "Floral Side Basket",
+      Description: "A beautiful arrangement in a charming basket, perfect for gifting.",
       Price: 4000 
     },
     {
       ID: 6,
       image: "./asset/images/pro6.jpg",
-      Name: "Gaming Mouse",
-      Description: "Ergonomic gaming mouse with customizable RGB lighting and high-precision sensor.",
+      Name: "Pink Present Box",
+      Description: "A lovely pink box filled with an assortment of delightful flowers.",
       Price: 1500 
     }
   ];
   getDiscountedPrice(price: number): number {
     let discount = 0;
   
-    // Determine discount based on price
+  
     if (price <= 1000) {
-      discount = 0.20; // 20% off
+      discount = 0.20;
     } else if (price > 1000 && price < 2000) {
-      discount = 0.10; // 10% off
+      discount = 0.10; 
     }
   
-    // Calculate discounted price
+ 
     return price - (price * discount);
   }
     
